@@ -2,7 +2,7 @@
     "name": "fun-language",
     "displayName": "Fun Language",
     "description": "Fun language support",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "publisher": "jBugman",
     "engines": {
         "vscode": "^1.13.0"

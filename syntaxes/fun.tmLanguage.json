@@ -37,7 +37,7 @@
 		},
 		{
 			"name": "storage.type.fun",
-			"match": "\\b(func|method|struct|interface|const|var)\\b"
+			"match": "\\b(func|method|struct|interface|const|var|alias)\\b"
 		},
 		{
 			"name": "support.function.go",
@@ -45,7 +45,7 @@
 		},
 		{
 			"name": "support.function.fun",
-			"match": "\\b(?:print|printf|set|slice|val|alias|cast|assert)\\b"
+			"match": "\\b(?:print|printf|set|slice|val|cast|assert)\\b"
 		},
 		{
 			"name": "constant.language.go",
