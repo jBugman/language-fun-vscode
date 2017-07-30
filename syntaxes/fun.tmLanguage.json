@@ -1,21 +1,61 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"scopeName": "source.fun",
 	"name": "Fun",
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"name": "comment.line.semicolon.fun",
+			"match": ";.*?$"
+		},
+		{
+			"name": "keyword.control.go",
+			"match": "\\b(break|case|continue|default|defer|fallthrough|if|for|go|range|return|select|switch)\\b"
+		},
+		{
+			"name": "keyword.other.go",
+			"match": "\\b(package|import)\\b"
+		},
+		{
+			"name": "keyword.operator.go",
+			"match": "\\+\\+|--|!=|&&|\\|\\||>=|<=|==|\\+|-|\\*|/|<|>|!|%|&|\\|"
+		},
+		{
+			"name": "constant.numeric",
+			"match": "\\b(\\d+|\\d+\\.\\d+)\\b"
+		},
+		{
+			"name": "entity.name",
+			"match": "(\\w+(?:\\.\\w+)+)"
+		},
+		{
+			"name": "entity.name.type",
+			"match": ":[^\\s\\)]+"
+		},
+		{
+			"name": "keyword.operator.fun",
+			"match": "\\."
+		},
+		{
+			"name": "storage.type.fun",
+			"match": "\\b(func|method|struct|interface|const|var)\\b"
+		},
+		{
+			"name": "support.function.go",
+			"match": "\\b(make|len)\\b"
+		},
+		{
+			"name": "support.function.fun",
+			"match": "\\b(?:print|printf|set|slice|val|alias|cast|assert)\\b"
+		},
+		{
+			"name": "constant.language.go",
+			"match": "\\b(?:nil|true|false)\\b"
 		},
 		{
 			"include": "#strings"
 		}
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.fun",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
 		"strings": {
 			"name": "string.quoted.double.fun",
 			"begin": "\"",
@@ -27,6 +67,5 @@
 				}
 			]
 		}
-	},
-	"scopeName": "source.fun"
+	}
 }
